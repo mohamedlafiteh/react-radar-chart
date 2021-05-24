@@ -4,10 +4,13 @@ import { Table } from 'react-bootstrap';
 
 export class ChartDataTable extends Component {
     render() {
-        const {data} = this.props.data
+        const {labels,datasets} = this.props.data.data;
         return (
        <Table striped bordered hover>
         <thead>
+            <tr>
+            <th colSpan="3">Title</th>
+            </tr>
             <tr>
             <th></th>
             <th>First dataset</th>
@@ -16,38 +19,23 @@ export class ChartDataTable extends Component {
         </thead>
         <tbody>
             {
-              data.labels.map((element,index) => {
+              labels.map((element,index) => {
                   return (
                     <tr key={index}>
                         <td>{element}</td>
-                        <td>A</td>
-                        <td>B</td>
+                        <td>{datasets[0].data[index]}</td>
+                        <td>{datasets[1].data[index]}</td>
                     </tr>
                   )
               })  
             }
-            {/* <tr>
-            <td>Eating</td>
-            <td>Mark</td>
-            <td>Otto</td>
-     
-            </tr>
-            <tr>
-            <td>2</td>
-            <td>Jacob</td>
-            <td>Thornton</td>
-     
-            </tr>
-            <tr>
-            <td>3</td>
-            <td >Larry the Bird</td>
-            <td></td>
-      
-            </tr> */}
+    
+           
         </tbody>
 </Table>
         )
     }
 }
+
 
 export default ChartDataTable
