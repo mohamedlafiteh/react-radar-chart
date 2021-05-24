@@ -13,8 +13,8 @@ export class ChartDataTable extends Component {
             </tr>
             <tr>
             <th></th>
-            <th>First dataset</th>
-            <th>Last dataset</th>
+            <th>First Dataset</th>
+            <th>Second Dataset</th>
             </tr>
         </thead>
         <tbody>
