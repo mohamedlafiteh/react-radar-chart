@@ -2,7 +2,6 @@
 import "./App.css"
 import RadarChart from "./components/RadarChart"
 import ChartDataTable from "./components/ChartDataTable"
-import Navbar from './components/Navbar'
 
 const data = require("./util/data")
 const options = require("./util/data")
@@ -19,9 +18,9 @@ class App extends React.Component{
   render() {
     const {data,options} =this.state
     return(
-      <div>
-        <Navbar/>
+      <>
          <div className="page-container">
+         <h2 style={{textAlign:"center",marginBottom:"20px"}}>RadarChart</h2>
           <div style={styling.row} >
                 <div style={styling.column} className="cul-one">
                   <RadarChart data={data} options={options} />   
@@ -32,7 +31,7 @@ class App extends React.Component{
                 </div>
           </div>
         </div>
-      </div>
+      </>
     )
   }
 }

@@ -4,3 +4,12 @@
 .cul-two{
   margin-left: 20px;
 }
+
+@media only screen and (max-width: 1200px) {
+  .page-container{
+  margin: 0px 
+}
+.cul-two{
+  margin-left: 0px;
+}
+}
